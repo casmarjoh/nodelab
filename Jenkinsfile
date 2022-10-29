@@ -6,10 +6,10 @@ pipeline {
                 docker { image 'node:12.22.1-alpine3.10' }
             }
             steps {
-                sh 'node -v'
+                sh 'npm install'
             }
         }
-        stage('Sonar') {
+       /* stage('Sonar') {
             agent {
                 docker { image 'maven:3.8.1-adoptopenjdk-11' }
             } 
@@ -20,6 +20,9 @@ pipeline {
 				''')
             }
         }
-    }
+    }*/
 }
+
+
+
 
