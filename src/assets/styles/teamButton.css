@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+a.button
+{
+	position: relative;
+	background: #fff;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 1.5em;
+	letter-spacing: 0.01em;
+	font-weight: 400;
+	padding: 0.5vw 2.5vw;
+	transition: 0.5s;
+  	margin: 2vw;
+}
+a.button:hover 
+{
+	letter-spacing: 0.1em;
+	background: var(--clr);
+	color: var(--clr);
+	box-shadow: 0 0 35px var(--clr);
+}
+a.button::before 
+{
+	content: '';
+	position: absolute;
+	inset: 2px;
+	background: rgb(5, 5, 5);
+}
+a.button span 
+{
+	position: relative;
+	z-index: 1;
+}
+a.button i 
+{
+	position: absolute;
+	inset: 0;
+	display: block;
+}
+a.button i::before 
+{
+	content: '';
+	position: absolute;
+	top: -6px;
+	left: 100%;
+	transform: translateX(-50%);
+	width: 1vw;
+	height: 1vw;
+	background: #27282c;
+	border: 2px solid var(--clr);
+	transition: 0.5s;
+	
+}
+a.button:hover i::before 
+{
+	left: 0%;
+	transform: translateX(-50%) rotate(45deg);
+	box-shadow: 40px 39px var(--clr);
+	border-radius: 10px;
+	
+}
+
+
+a.button i::after 
+{
+	content: '';
+	position: absolute;
+	bottom: -6px;
+	left: 0;
+	transform: translateX(-50%);
+	width: 1vw;
+	height: 1vw;
+	background: #27282c;
+	border: 2px solid var(--clr);
+	transition: 0.5s;	
+}
+a.button:hover i::after 
+{
+	left: 100%;
+	transform: translateX(-50%) rotate(-45deg);
+	box-shadow: 38px -39px var(--clr);
+	border-radius: 10px;
+}

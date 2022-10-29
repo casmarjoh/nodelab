@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+@font-face {
+  font-family: Cyber;
+  src: url("https://assets.codepen.io/605876/Blender-Pro-Bold.otf");
+  font-display: swap;
+}
+
+#app {
+    text-align: center;
+}
+
+body {
+    text-align: center;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    font-family: 'Cyber', sans-serif;
+    background-color: rgb(17, 17, 17);
+    color: #FFF;
+    background-color: #03031A;
+}
+
+/* main {
+  margin-top: 0;
+  top: 0;
+} */
+
+.header {
+  padding: 0;
+  margin: 0;
+  margin-top: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+h1{
+    margin: 30px 0 30px 0;
+}
