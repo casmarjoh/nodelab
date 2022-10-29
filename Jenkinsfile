@@ -6,10 +6,8 @@ pipeline {
                 docker { image 'node:12.22.1-alpine3.10' }
             }
             steps steps {
-                script {
-                  sh "npm install"
-                }
-            }
+                 sh 'npm install'
+                 }
         }
         stage('Sonar') {
             agent {
