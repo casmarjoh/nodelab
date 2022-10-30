@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Back-end') {
             agent {
-                docker { image 'node:12.22.1-alpine3.10' }
+                docker { image 'node:latest' }
             }
             steps {
                 sh 'npm install'
