@@ -19,8 +19,8 @@ pipeline {
 			  -Dsonar.login=sqa_9bea08f8d15388c978ae09ed8741ad29d664d854
 				''')
             }
-        }
-    }*/
+        }*/
+    }
 }
 
 
