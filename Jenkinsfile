@@ -12,7 +12,8 @@ pipeline {
         }
          stage('Test') {
             steps {
-                sh 'node test'
+                echo 'voy aqui'
+                //sh 'node test'
             }
         }
     }
