@@ -4,7 +4,7 @@ pipeline {
         stage('Back-end') {
             agent {
                 docker { image 'mdsol/node12' 
-		       	 args '-u root
+		        args '-u root --privileged'
 		       }
             }
             steps {
