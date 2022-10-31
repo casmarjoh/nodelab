@@ -10,6 +10,10 @@ pipeline {
             steps {
 		sh 'npm install '
             }
+           steps {
+		    sh 'npm test '
+            }
+
         }
        /* stage('Sonar') {
             agent {
@@ -24,7 +28,6 @@ pipeline {
         }*/
     }
 }
-
 
 
 
