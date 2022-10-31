@@ -3,7 +3,9 @@ pipeline {
     stages {
         stage('Back-end') {
             agent {
-                docker { image 'mdsol/node12' }
+                docker { image 'mdsol/node12' 
+		       	 args '-u root
+		       }
             }
             steps {
 		sh 'npm install '
