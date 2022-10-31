@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Back-end') {
             agent {
-                docker { image 'node:latest' }
+                docker { image 'mdsol/node12' }
             }
             steps {
                 sh 'npm install'
