@@ -1,11 +1,16 @@
 pipeline {
     agent {
-        docker { image 'node:16.13.1-alpine'
+        docker { image 'mdsol/node12'
                  args '-u root --privileged'
         }
     }
     stages {
-        stage('Test') {
+        stage('Build') {
+            steps {
+                sh 'node --version'
+            }
+        }
+         stage('Test') {
             steps {
                 sh 'node --version'
             }
