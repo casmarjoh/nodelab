@@ -7,13 +7,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'node install'
+                sh 'rm -rf node_modules package-lock.json && npm install && npm start'
             }
         }
          stage('Test') {
             steps {
-                echo 'voy aqui'
-                //sh 'node test'
+                sh 'npm install'
             }
         }
     }
