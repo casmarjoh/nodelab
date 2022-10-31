@@ -5,12 +5,12 @@ pipeline {
         }
     }
     stages {
-        stage('Build') {
+        stage('pre-stage') {
             steps {
                 sh 'rm -rf node_modules package-lock.json'
             }
         }
-         stage('Test') {
+         stage('build') {
             steps {
                 sh 'npm install'
             }
