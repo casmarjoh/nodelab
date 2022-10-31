@@ -6,6 +6,7 @@ pipeline {
                 docker { image 'mdsol/node12' }
             }
             steps {
+		sh 'sudo chown -R 1000:1000 "/home/$USER/.npm"'    
                 sh 'npm install'
             }
         }
