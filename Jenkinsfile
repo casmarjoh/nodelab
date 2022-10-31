@@ -7,12 +7,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'node --version'
+                sh 'node install'
             }
         }
          stage('Test') {
             steps {
-                sh 'node --version'
+                sh 'node test'
             }
         }
     }
