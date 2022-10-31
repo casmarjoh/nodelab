@@ -6,8 +6,7 @@ pipeline {
                 docker { image 'mdsol/node12' }
             }
             steps {
-		sh 'chown -R 1000:1000 "/home/$USER/.npm"'    
-                sh 'npm install'
+		sh 'npm install package@latest'
             }
         }
        /* stage('Sonar') {
