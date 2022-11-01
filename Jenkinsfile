@@ -13,6 +13,10 @@ pipeline {
          stage('build') {
             steps {
                 sh 'npm install'
+                sh 'npm run test'
+                sh 'npm run coverage-lcov'
+                sh 'npm install sonar-scanner'
+                sh 'npm run sonar'
             }
         }
         stage('Test') {
