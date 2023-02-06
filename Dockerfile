@@ -1,20 +1,9 @@
-# Install the app dependencies in a full Node docker image
-FROM registry.access.redhat.com/ubi8/nodejs-16:latest
-
-# Copy package.json and package-lock.json
+FROM node:16
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
 COPY package*.json ./
-
-# Install app dependencies
-RUN npm install -g yarn
-
-# Copy the dependencies into a Slim Node docker image
-FROM registry.access.redhat.com/ubi8/nodejs-16-minimal:latest
-
-# Install app dependencies
-COPY --from=0 /opt/app-root/src/node_modules /opt/app-root/src/node_modules
-COPY . /opt/app-root/src
-
-ENV NODE_ENV production
-ENV PORT 8080
-
-CMD ["npm", "start"]
+RUN npm install 
+RUN npm audit fix
+COPY . /usr/src/app
+EXPOSE 8080
+CMD [ "node", "app.js" ]
